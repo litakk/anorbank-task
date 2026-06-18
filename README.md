@@ -25,6 +25,6 @@
 Для запуска проекта локально выполните следующие шаги:
 
 1. **Клонируйте репозиторий:**
-   ```bash
-   git clone [https://github.com/your-username/anor-compare.git](https://github.com/your-username/anor-compare.git)
-   cd anor-compare
+```bash
+   git clone [https://github.com/litakk/anorbank-task.git](https://github.com/litakk/anorbank-task.git)
+   cd anorbank-task
