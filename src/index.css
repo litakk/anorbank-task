@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --color-anor-red: #D61F26;
+  --color-anor-dark: #A51318;
+  --color-anor-light: #FDF2F2;
+
+  --spacing-max-width: 1280px;
+  --spacing-margin-desktop: 48px;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
