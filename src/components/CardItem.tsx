@@ -6,11 +6,17 @@ interface CardItemProps {
   onToggle: (id: number) => void;
 }
 
-export default function CardItem({ card, isSelected, onToggle }: CardItemProps) {
+export default function CardItem({
+  card,
+  isSelected,
+  onToggle,
+}: CardItemProps) {
   return (
     <div
       className={`bg-white p-4 sm:p-6 border relative flex flex-col group transition-all duration-300 ${
-        isSelected ? 'border-red-600 ring-1 ring-red-600 shadow-md' : 'border-border-subtle hover:border-outline'
+        isSelected
+          ? 'border-red-600 ring-1 ring-red-600 shadow-md'
+          : 'border-border-subtle hover:border-outline'
       }`}
     >
       <div className="h-32 sm:h-40 mb-4 sm:mb-6 flex items-center justify-center overflow-hidden">
@@ -40,7 +46,11 @@ export default function CardItem({ card, isSelected, onToggle }: CardItemProps) 
               stroke="currentColor"
               strokeWidth="3"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M5 13l4 4L19 7"
+              />
             </svg>
             <span>{bullet}</span>
           </li>

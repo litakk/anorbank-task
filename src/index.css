@@ -1,9 +1,9 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-  --color-anor-red: #D61F26;
-  --color-anor-dark: #A51318;
-  --color-anor-light: #FDF2F2;
+  --color-anor-red: #d61f26;
+  --color-anor-dark: #a51318;
+  --color-anor-light: #fdf2f2;
 
   --spacing-max-width: 1280px;
   --spacing-margin-desktop: 48px;

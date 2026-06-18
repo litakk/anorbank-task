@@ -6,20 +6,23 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import ComparisonHeader from './components/ComparisonHeader';
 
-// Явно определяем тип ключей характеристик, соответствующий ComparisonTable
 type FeatureKey = 'fee' | 'cashback' | 'sms' | 'withdrawal';
 
 export default function App() {
   const { selectedCardIds, addCard, removeCard } = useCardStore();
 
-  const selectedCards = CARDS_DATA.filter(card => selectedCardIds.includes(card.id));
+  const selectedCards = CARDS_DATA.filter((card) =>
+    selectedCardIds.includes(card.id)
+  );
   const emptySlotsCount = Math.max(0, 3 - selectedCards.length);
   const tableSlots = [...selectedCards, ...Array(emptySlotsCount).fill(null)];
 
   const isRowDifferent = (featureKey: FeatureKey) => {
     if (selectedCards.length <= 1) return false;
     const firstValue = selectedCards[0].features[featureKey];
-    return selectedCards.some(card => card.features[featureKey] !== firstValue);
+    return selectedCards.some(
+      (card) => card.features[featureKey] !== firstValue
+    );
   };
 
   return (

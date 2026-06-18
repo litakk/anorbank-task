@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 export default function Header() {
-  // Добавляем локальный стейт, которого не хватало
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   return (
@@ -17,13 +16,33 @@ export default function Header() {
               />
             </a>
             <nav className="hidden md:flex gap-6 font-label-md text-sm font-semibold">
-              <a className="text-slate-600 hover:text-red-600 border-b-2 border-transparent hover:border-red-600 pb-1 transition-colors duration-200" href="#cards">Карты</a>
-              <a className="text-slate-600 hover:text-red-600 border-b-2 border-transparent hover:border-red-600 pb-1 transition-colors duration-200" href="#credits">Кредиты</a>
-              <a className="text-slate-600 hover:text-red-600 border-b-2 border-transparent hover:border-red-600 pb-1 transition-colors duration-200" href="#deposits">Депозиты</a>
-              <a className="text-slate-600 hover:text-red-600 border-b-2 border-transparent hover:border-red-600 pb-1 transition-colors duration-200" href="#services">Услуги</a>
+              <a
+                className="text-slate-600 hover:text-red-600 border-b-2 border-transparent hover:border-red-600 pb-1 transition-colors duration-200"
+                href="#cards"
+              >
+                Карты
+              </a>
+              <a
+                className="text-slate-600 hover:text-red-600 border-b-2 border-transparent hover:border-red-600 pb-1 transition-colors duration-200"
+                href="#credits"
+              >
+                Кредиты
+              </a>
+              <a
+                className="text-slate-600 hover:text-red-600 border-b-2 border-transparent hover:border-red-600 pb-1 transition-colors duration-200"
+                href="#deposits"
+              >
+                Депозиты
+              </a>
+              <a
+                className="text-slate-600 hover:text-red-600 border-b-2 border-transparent hover:border-red-600 pb-1 transition-colors duration-200"
+                href="#services"
+              >
+                Услуги
+              </a>
             </nav>
           </div>
-          
+
           <div className="flex items-center gap-3 sm:gap-6">
             <div className="relative hidden sm:inline-block group py-2">
               <button className="flex items-center gap-1 text-sm font-semibold text-secondary hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 transition-colors cursor-pointer">
@@ -59,10 +78,25 @@ export default function Header() {
               onClick={() => setMobileNavOpen((open) => !open)}
             >
               {mobileNavOpen ? (
-                <img className="w-6 h-6" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXgtaWNvbiBsdWNpZGUteCI+PHBhdGggZD0iTTE4IDYgNiAxOCIvPjxwYXRoIGQ9Im02IDYgMTIgMTIiLz48L3N2Zz4=" alt="close" />
+                <img
+                  className="w-6 h-6"
+                  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXgtaWNvbiBsdWNpZGUteCI+PHBhdGggZD0iTTE4IDYgNiAxOCIvPjxwYXRoIGQ9Im02IDYgMTIgMTIiLz48L3N2Zz4="
+                  alt="close"
+                />
               ) : (
-                <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                <svg
+                  className="w-6 h-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
                 </svg>
               )}
             </button>
@@ -71,11 +105,33 @@ export default function Header() {
 
         {mobileNavOpen && (
           <nav className="md:hidden border-t border-border-subtle bg-surface-white px-4 sm:px-6 py-4 flex flex-col gap-4">
-            <a className="text-primary font-label-md text-sm font-semibold" href="#">Карты</a>
-            <a className="text-secondary font-label-md text-sm font-semibold hover:text-primary transition-colors" href="#">Кредиты</a>
-            <a className="text-secondary font-label-md text-sm font-semibold hover:text-primary transition-colors" href="#">Депозиты</a>
-            <a className="text-secondary font-label-md text-sm font-semibold hover:text-primary transition-colors" href="#">Услуги</a>
-            <button className="text-left text-sm font-semibold text-secondary hover:text-primary transition-colors">RU/UZ</button>
+            <a
+              className="text-primary font-label-md text-sm font-semibold"
+              href="#"
+            >
+              Карты
+            </a>
+            <a
+              className="text-secondary font-label-md text-sm font-semibold hover:text-primary transition-colors"
+              href="#"
+            >
+              Кредиты
+            </a>
+            <a
+              className="text-secondary font-label-md text-sm font-semibold hover:text-primary transition-colors"
+              href="#"
+            >
+              Депозиты
+            </a>
+            <a
+              className="text-secondary font-label-md text-sm font-semibold hover:text-primary transition-colors"
+              href="#"
+            >
+              Услуги
+            </a>
+            <button className="text-left text-sm font-semibold text-secondary hover:text-primary transition-colors">
+              RU/UZ
+            </button>
             <a
               href="https://www.anorbank.uz/"
               target="_blank"

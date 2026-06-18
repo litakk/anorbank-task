@@ -8,7 +8,12 @@ interface CardGridProps {
   onRemoveCard: (id: number) => void;
 }
 
-export default function CardGrid({ cards, selectedCardIds, onAddCard, onRemoveCard }: CardGridProps) {
+export default function CardGrid({
+  cards,
+  selectedCardIds,
+  onAddCard,
+  onRemoveCard,
+}: CardGridProps) {
   const handleToggle = (id: number, isSelected: boolean) => {
     if (isSelected) {
       onRemoveCard(id);
@@ -22,7 +27,7 @@ export default function CardGrid({ cards, selectedCardIds, onAddCard, onRemoveCa
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
         {cards.map((card) => {
           const isSelected = selectedCardIds.includes(card.id);
-          
+
           return (
             <CardItem
               key={card.id}
